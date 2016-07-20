@@ -1,0 +1,45 @@
+.cajita {
+  border: 2px solid black;
+  height: 50px;
+  margin-bottom: 5px;
+  width: 50px; }
+  .cajita.cajita-0 {
+    background: red; }
+  .cajita.cajita-1 {
+    background: #f50000; }
+  .cajita.cajita-2 {
+    background: #eb0000; }
+  .cajita.cajita-3 {
+    background: #e00000; }
+  .cajita.cajita-4 {
+    background: #d60000; }
+  .cajita.cajita-5 {
+    background: #cc0000; }
+  .cajita.cajita-6 {
+    background: #c20000; }
+  .cajita.cajita-7 {
+    background: #b80000; }
+  .cajita.cajita-8 {
+    background: #ad0000; }
+  .cajita.cajita-9 {
+    background: #a30000; }
+  .cajita.cajita-10 {
+    background: #990000; }
+  .cajita.cajita-11 {
+    background: #8f0000; }
+  .cajita.cajita-12 {
+    background: #850000; }
+  .cajita.cajita-13 {
+    background: #7a0000; }
+  .cajita.cajita-14 {
+    background: #700000; }
+  .cajita.cajita-15 {
+    background: #660000; }
+  .cajita.cajita-16 {
+    background: #5c0000; }
+  .cajita.cajita-17 {
+    background: #520000; }
+  .cajita.cajita-18 {
+    background: #470000; }
+  .cajita.cajita-19 {
+    background: #3d0000; }

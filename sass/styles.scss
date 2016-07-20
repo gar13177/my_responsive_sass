@@ -1,0 +1,21 @@
+$gradient-step-size: 2px;
+$base-color: blue;
+$cajita-size: 30px;
+
+
+@mixin cajita ($size,$base-color,$qty,$gss) {
+    border: 2px solid black;
+    height: $size;
+    margin-bottom: 5px;
+    width: $size;
+
+    @for $i from 0 through ($qty - 1){
+      &.cajita-#{$i}{
+        background: darken($base-color,$gss*$i);
+      }
+    }
+}
+
+.cajita{
+  @include cajita(50px,red,20,2px);
+}
