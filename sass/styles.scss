@@ -1,21 +1,105 @@
-$gradient-step-size: 2px;
-$base-color: blue;
-$cajita-size: 30px;
+$colors: (#ff3333,#99ff65,#ffff00,lightblue,#ff950e,#9900ff,#66cc99,#996633);
 
-
-@mixin cajita ($size,$base-color,$qty,$gss) {
-    border: 2px solid black;
-    height: $size;
-    margin-bottom: 5px;
-    width: $size;
-
-    @for $i from 0 through ($qty - 1){
-      &.cajita-#{$i}{
-        background: darken($base-color,$gss*$i);
-      }
-    }
+.clear {
+    clear: both;
 }
 
-.cajita{
-  @include cajita(50px,red,20,2px);
+@mixin box (){
+  padding: 0;
+  margin-bottom: 10px;
+  height: 300px;
+  box-sizing: border-box;
+  width: 100%;
+
+  $index: 1;
+  @each $color in $colors{
+    &.b#{$index}{
+      background-color: $color;
+    }
+    $index: $index + 1;
+  }
+
+}
+
+.box {
+    @include box();    
+}
+
+.box.b4 {
+    position: relative;
+    padding-right: 150px;    
+    height: 75px;            
+}
+.b4 input[type="text"]{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background: lightblue;
+}
+.b4 input[type="button"] {
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@media only screen and (min-width: 480px) {
+    /* For tablets: */
+    .first-column-wrapper-1, .second-column-wrapper-1 {
+        float:left;
+        box-sizing: border-box;
+        width: 50%;
+    }
+
+    .first-column-wrapper-1 { 
+        padding-right: 5px;
+    }
+
+    .second-column-wrapper-1 {
+        padding-left: 5px;
+    }
+
+    .third-column-wrapper-1 {
+        box-sizing:border-box;
+        clear:both;
+    }
+
+}
+
+@media only screen and (min-width: 768px){
+
+    .first-column-wrapper-2, .second-column-wrapper-2 {
+        float:left;
+        box-sizing: border-box;
+        width: 50%;
+    }
+
+    .first-column-wrapper-2 {
+        padding-right: 5px;
+    }
+
+    .second-column-wrapper-2 {
+        padding-left: 5px;
+    }
+
+    .first-column-wrapper-1, .second-column-wrapper-1 {
+        width: 33.33%;
+    }
+
+    .second-column-wrapper-1 {
+        padding-right: 5px;
+    }
+
+    .third-column-wrapper-1 {
+        clear: none;
+        float: left;
+        padding-left: 5px;
+        width: 33.34%;
+
+    }
+    .b8 {
+        clear: both;
+    }
+
 }
